@@ -1,0 +1,124 @@
+/* General settings */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    padding: 30px 40px;
+}
+
+/* Header */
+header h1 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+header p {
+    text-align: center;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left: 6px solid #ffeeba;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-size: 0.95em;
+}
+
+/* Form styling */
+.form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+input[type=text], textarea {
+    margin-top: 5px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input[type=text]:focus, textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0,123,255,0.3);
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result section */
+.result-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.result-card {
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+}
+
+.result-card.genuine {
+    background-color: #28a745; /* Green */
+}
+
+.result-card.fraud {
+    background-color: #dc3545; /* Red */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555;
+}

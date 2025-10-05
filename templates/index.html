@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Job Fraud Detection</h1>
+            <p>Detect potential fraudulent job postings and stay safe online.</p>
+        </header>
+
+        <section class="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>
+                This is a small project on Job Fraud Detection. It helps in identifying suspicious red flags
+                in job postings that are often overlooked. The predictions are for educational purposes only
+                and should not replace official verification.
+            </p>
+        </section>
+
+        <section class="form-section">
+            <form method="POST" action="/predict">
+                <label>Company Name:</label>
+                <input type="text" name="company" placeholder="Enter company name" value="{{ company if company }}" required>
+
+                <label>Job Title:</label>
+                <input type="text" name="title" placeholder="Enter job title" value="{{ title if title }}" required>
+
+                <label>Job Description:</label>
+                <textarea name="description" placeholder="Enter job description" rows="6" required>{{ description if description }}</textarea>
+
+                <button type="submit">Predict</button>
+            </form>
+        </section>
+
+        {% if result %}
+        <section class="result-section">
+            <div class="result-card {% if result=='Fraudulent' %}fraud{% else %}genuine{% endif %}">
+                <h2>Prediction: {{ result }}</h2>
+                <p>Confidence: {{ confidence }}</p>
+            </div>
+        </section>
+        {% endif %}
+
+        <footer>
+            <p>Developed by Mugala Shravya</p>
+        </footer>
+    </div>
+</body>
+</html>
